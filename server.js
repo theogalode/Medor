@@ -34,7 +34,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
-app.use("/api/auth", auth);
-app.get('/', (req, res) => res.send('Express App is running'));
+app.use("/medor/api/auth", auth);
+app.get('/medor', (req, res) => res.send('Express App is running'));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}...`));
