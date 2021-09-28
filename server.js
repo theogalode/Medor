@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 
 const passport = require('./passport/setup');
 const auth = require('./routes/auth');
+const cors = require('cors');
 
 const app = express();
 const port = 5000;
@@ -18,6 +19,7 @@ mongoose
 // Bodyparser middleware, extended false does not allow nested payloads  
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 // Express Session
 app.use(
