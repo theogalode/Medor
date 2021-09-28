@@ -8,7 +8,7 @@ const auth = require('./routes/auth');
 
 const app = express();
 const port = 5000;
-const MONGO_URI = 'mongodb://172.31.11.38:27017/medor';
+const MONGO_URI = 'mongodb://127.0.0.1:27017/medor';
 
 mongoose
   .connect(MONGO_URI, { useNewUrlParser: true })
